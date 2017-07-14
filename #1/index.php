@@ -108,6 +108,23 @@
 ?>
 
 
-
+<?php
+	#Задание 1 пункт 7
+	echo "<br><br><br><table border='2px' style='text-align: center;'>";
+	for($i = 1; $i <= 10; $i++){
+		echo '<tr>';
+		for($k = 1; $k <= 10; $k++){
+			if($i % 2 === 0 && $k % 2 === 0){
+				echo "<td>(" . ($i * $k) . ")</td>";
+			}elseif($i % 2 === 1 && $k % 2 === 1){
+				echo "<td>[" . ($i * $k) . "]</td>";
+			}else{
+				echo "<td>" . ($i * $k) . "</td>";
+			}
+		}
+		echo '</tr>';
+	}
+echo "</table><br><br><br>";
+?>
 
 
