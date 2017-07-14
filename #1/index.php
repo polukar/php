@@ -72,6 +72,42 @@
 				echo "Неизвестный   день";
 				break;
 	}	
-
-	
 ?>
+
+<?php
+	#Задание 1 пункт 6
+	$bmw['model'] = "x5";
+	$bmw['speed'] = 120;
+	$bmw['doors'] = 5;
+	$bmw['year'] = "2015";
+	
+	$toyota = [
+		'model' => 'crown',
+		'speed' => 180,
+		'doors' => 4,
+		'year' => '1993'
+	];
+	
+	$opel = [
+		'model' => 'vesta',
+		'speed' => 180,
+		'doors' => 5,
+		'year' => '2006'
+	];
+
+	$cars['bmw'] = $bmw;
+	$cars['toyota'] = $toyota;
+	$cars['opel'] = $opel;
+	
+	foreach($cars as $key => $value){
+		echo "<br><br><br>car $key <br>" ;
+		foreach($value as $key=>$value){
+			 echo $value . "&nbsp;" ;
+		}
+	}	
+?>
+
+
+
+
+
