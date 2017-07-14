@@ -132,19 +132,22 @@ echo "</table><br><br><br>";
 ?>
 
 <?php
-	#Задание 1 пункт 7
+	#Задание 1 пункт 8
 	$str = "php js mysql html css";
 	echo $str;
 	$explode = explode(' ', $str);
 	echo '<br>';
 	echo print_r($explode, true);
 	$allstr = count($explode);
+	
 
 	while ($allstr) {
 		$asarray[] = $explode[$allstr - 1];
 		$allstr--;
+		$asarrayrev = array_reverse($asarray);
 	}
-	$newstr = implode(' \ ', $asarray);
+
+	$newstr = implode(' \ ', $asarrayrev);
 	echo '<br>';
 	echo $newstr;
 ?>
