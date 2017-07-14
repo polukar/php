@@ -127,4 +127,20 @@
 echo "</table><br><br><br>";
 ?>
 
+<?php
+	#Задание 1 пункт 7
+	$str = "php js mysql html css";
+	echo $str;
+	$explode = explode(' ', $str);
+	echo '<br>';
+	echo print_r($explode, true);
+	$allstr = count($explode);
 
+	while ($allstr) {
+		$asarray[] = $explode[$allstr - 1];
+		$allstr--;
+	}
+	$newstr = implode(' \ ', $asarray);
+	echo '<br>';
+	echo $newstr;
+?>
