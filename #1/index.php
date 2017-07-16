@@ -138,16 +138,16 @@ echo "</table><br><br><br>";
 	$explode = explode(' ', $str);
 	echo '<br>';
 	echo print_r($explode, true);
-	$allstr = count($explode);
+	$i = 0;
+	while ($i < count($explode) / 2) {
+   $buf = $explode[$i];
+   $explode[$i] = $explode[count($explode) - $i - 1];
+   $explode[count($explode) - $i - 1] = $buf;
+   $i++;
+}
+
 	
-
-	while ($allstr) {
-		$asarray[] = $explode[$allstr - 1];
-		$allstr--;
-		$asarrayrev = array_reverse($asarray);
-	}
-
-	$newstr = implode(' \ ', $asarrayrev);
+	$newstr = implode(' \ ', $explode);
 	echo '<br>';
 	echo $newstr;
 ?>
